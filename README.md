@@ -1,138 +1,146 @@
-# ⚡ Parikshit Thakur — Personal Portfolio & Tech Lab
+<div align="center">
 
-[![Live Domain](https://img.shields.io/badge/Live_Domain-parikshit07.tech-a855f7?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.parikshit07.tech)
-[![GitHub Repository](https://img.shields.io/badge/GitHub_Repo-parikshit--portfolio-7e22ce?style=for-the-badge&logo=github&logoColor=white)](https://github.com/parikshit-thakur25/parikshit-portfolio)
-[![University](https://img.shields.io/badge/University-Graphic_Era_(Deemed_to_be_University)-1d4ed8?style=for-the-badge)](https://www.geu.ac.in/)
+# ⚡ Parikshit Thakur
+### *Full-Stack Developer & Machine Learning Learner*
+
+[![Live Portfolio](https://img.shields.io/badge/Live_Site-parikshit07.tech-7e22ce?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.parikshit07.tech)
+[![GitHub](https://img.shields.io/badge/GitHub-parikshit--portfolio-a855f7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/parikshit-thakur25/parikshit-portfolio)
+[![University](https://img.shields.io/badge/University-Graphic_Era_(Deemed_to_be_University)-2563eb?style=for-the-badge&logo=graduation-cap&logoColor=white)](https://www.geu.ac.in/)
 [![License](https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge)](LICENSE)
 
-Welcome to the source repository for my personal developer portfolio!
+<br/>
 
-I'm **Parikshit Thakur**, a **B.Tech Computer Science and Engineering student specializing in Artificial Intelligence and Data Science at Graphic Era (Deemed to be University), Dehradun, Uttarakhand, India**.
+> **Welcome to the source repository of my personal portfolio & engineering lab!**  
+> Designed and handcrafted with a **Deep Brinjal Obsidian & Electric Violet** aesthetic, an interactive particle constellation canvas, and a terminal command simulator.
 
-This portfolio serves as my professional online presence, engineering showcase, and hands-on technology lab. It documents my learning journey while highlighting my focus in full-stack web engineering, algorithms, and applied machine learning.
-
-Built from the ground up using **HTML5, CSS3, and vanilla JavaScript**, this project focuses on mastering web fundamentals, DOM manipulation, responsive design, and modern interactive user experiences without relying on heavy third-party frameworks.
-
----
-
-## 🎓 Education
-
-**Graphic Era (Deemed to be University)**  
-Dehradun, Uttarakhand, India
-
-- **Degree:** Bachelor of Technology (B.Tech)
-- **Branch:** Computer Science and Engineering
-- **Specialization:** Artificial Intelligence and Data Science
-- **Timeline:** 2026 — Present
+</div>
 
 ---
 
-## 🎯 Purpose & Placement Journey
+## 🎓 Education & Background Card
 
-This project was built to document my development journey as a computer science student and create a professional platform to showcase my technical skills to recruiters and engineering teams.
-
-### Key Objectives:
-- 🚀 **Placement & Internship Portfolio:** Presenting production engineering projects, including **CardioVision AI**, to recruiters and tech interview panels.
-- 🧪 **Hands-on Tech Lab:** Practicing JavaScript DOM manipulation, HTML5 canvas graphics, CSS glassmorphism, browser APIs, and client-side session states (`sessionStorage`).
-- 🌐 **Custom Domain & Cloud Hosting:** Learning website deployment, CNAME custom domain configuration ([parikshit07.tech](https://www.parikshit07.tech)), DNS routing, and HTTPS security.
-- 📚 **Continuous Learning:** Applying concepts through practical implementation and improving my software development skills.
+| 🏛️ Institution | 🎓 Degree & Specialization | 📍 Location | ⏳ Timeline |
+| :--- | :--- | :--- | :--- |
+| **Graphic Era (Deemed to be University)** | **B.Tech — Computer Science & Engineering**<br/>*Specialization in Artificial Intelligence & Data Science* | Dehradun, Uttarakhand, India | **2026 — Present** |
 
 ---
 
-## 🔥 Features & Architecture
+## 🎯 Placement Journey & Core Focus Cards
 
-- **🌌 Live Interactive Canvas Background:** A 60 FPS lightweight HTML5 `<canvas>` rendering floating glowing violet/lavender particles that drift smoothly and dynamically connect with violet threads based on cursor position.
-- **🍆 Deep Brinjal Obsidian & Electric Violet Theme:** A custom high-contrast visual design featuring deep velvet brinjal backgrounds (`#07020d`), glowing electric violet borders (`#a855f7`), and ambient drifting mesh orbs.
-- **✍️ Cursive Handwriting Intro Splash Screen:** An animated handwriting introduction (`"hello ,"` ➔ `"parikshit"`) with keyboard/click skip overrides and `sessionStorage` persistence so it plays only once per session.
-- **💻 Cyber Terminal Widget (`parikshit@local:~$`):** An interactive command-line simulator supporting commands such as `whoami`, `status`, `skills`, `projects`, `contact`, and `clear`.
-- **🫀 CardioVision AI Featured Project:** Clinical Heart Disease Risk Assessment Tool built with Python, Scikit-Learn (94.2% accuracy), and Flask, deployed live on Render with full source code on GitHub.
-- **📄 Direct Resume PDF Integration:** Direct one-click access to view and download my official software engineering resume (`resume.pdf`).
-- **📱 Responsive Interface:** Fully mobile-friendly layout optimized for phones, tablets, and wide monitors.
+| 🚀 Placement & Engineering Focus | 💡 Learning Philosophy |
+| :--- | :--- |
+| <ul><li>Building production-grade **Full-Stack Web Applications**</li><li>Exploring **Applied Machine Learning & Diagnostic Systems**</li><li>Mastering Data Structures & Algorithms in C++ & Python</li><li>Preparing for Software Engineering placement drives</li></ul> | <ul><li>**Zero-Template Rule:** Handcrafted with semantic HTML, CSS, and vanilla JS</li><li>**Understanding over copying:** Deep fundamentals first</li><li>**Live Demonstrations:** Every project hosted live with public source code</li></ul> |
 
 ---
 
-## 🛠️ Tech Stack
+## 🌟 Portfolio Feature Cards
 
-| Category | Technologies | Purpose |
-| :--- | :--- | :--- |
-| **Frontend** | HTML5, CSS3, JavaScript (ES6+) | Semantic HTML, modular styles, and reactive DOM logic |
-| **Interactive Canvas** | HTML5 Canvas API, 2D Context | 60 FPS floating particle constellation and cursor collision |
-| **UI Design** | CSS Variables, Flexbox, CSS Grid, Glassmorphism | Deep Brinjal Obsidian theme, luminescent violet borders, and ambient orbs |
-| **Typography** | Google Fonts (`Caveat`, `Outfit`, `Plus Jakarta Sans`, `Fira Code`) | Typography pairing for cursive handwriting, headings, and terminal prompts |
-| **Browser APIs** | HTML5 Canvas, `sessionStorage`, Clipboard API | Interactive background, one-time intro splash, and 1-click email copy |
-| **Hosting & Domain** | GitHub Pages + Custom Domain | Deployed via GitHub Pages with CNAME routing to `parikshit07.tech` |
+| Feature | Type | Description |
+| :--- | :---: | :--- |
+| 🌌 **Live Particle Constellation** | `Canvas API` | 60 FPS lightweight HTML5 `<canvas>` rendering floating lavender particles that connect with violet threads based on cursor position. |
+| 🍆 **Deep Brinjal Obsidian Theme** | `CSS3 Design` | Custom high-contrast theme featuring velvet aubergine (`#07020d`), luminescent violet borders (`#a855f7`), and drifting ambient orbs. |
+| 💻 **Cyber Terminal Simulator** | `JavaScript` | Interactive CLI widget (`parikshit@local:~$`) responding to `whoami`, `skills`, `projects`, `status`, and `clear`. |
+| ✍️ **Cursive Handwriting Intro** | `Session UX` | Handwriting splash screen (`"hello ,"` ➔ `"parikshit"`) with `sessionStorage` persistence (plays only once per visit). |
+| 📑 **Direct PDF Resume Vault** | `HTML5 API` | Instant one-click buttons to view and download my software engineering resume (`resume.pdf`). |
 
 ---
 
-## 📂 Repository Structure
+## 🫀 Featured Engineering Project Card
+
+<table>
+  <tr>
+    <td width="65%">
+      <h3>🩺 CardioVision AI — Clinical Heart Disease Risk Predictor</h3>
+      <p>An end-to-end Healthcare ML microservice that evaluates patient clinical parameters (resting BP, cholesterol, ECG, thalach) to predict cardiac risk in real time.</p>
+      <ul>
+        <li><strong>Machine Learning:</strong> Scikit-Learn Support Vector Machine (SVM) achieving <strong>94.2% test accuracy</strong>.</li>
+        <li><strong>Backend & API:</strong> Python Flask REST API serving live predictions.</li>
+        <li><strong>Deployment:</strong> Hosted on Render cloud with automated CI/CD.</li>
+      </ul>
+      <p>
+        <a href="https://heart-disease-prediction-f37g.onrender.com" target="_blank"><b>🔗 Open Live Demo ↗</b></a> &nbsp;|&nbsp; 
+        <a href="https://github.com/parikshit-thakur25/heart-disease-prediction" target="_blank"><b>🐙 GitHub Repository ↗</b></a>
+      </p>
+    </td>
+    <td width="35%" align="center">
+      <img src="https://img.shields.io/badge/Accuracy-94.2%25-10b981?style=for-the-badge" alt="Accuracy Badge"/><br/><br/>
+      <img src="https://img.shields.io/badge/Model-SVM-8b5cf6?style=for-the-badge" alt="Model Badge"/><br/><br/>
+      <img src="https://img.shields.io/badge/Backend-Flask_API-f43f5e?style=for-the-badge" alt="Backend Badge"/>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🛠️ Technical Stack Cards
+
+| Domain | Technologies Mastered |
+| :--- | :--- |
+| **Frontend Development** | `HTML5` `CSS3` `JavaScript (ES6+)` `Glassmorphism` `Responsive Grid/Flexbox` |
+| **Backend & Microservices** | `Node.js` `Express.js` `Python (Flask)` `RESTful APIs` |
+| **Machine Learning & Data** | `Python` `Scikit-Learn` `Pandas` `NumPy` `Jupyter Notebooks` |
+| **Databases & Storage** | `MongoDB` `JSON` `HTML5 LocalStorage` `SessionStorage` |
+| **DevOps & Cloud Tools** | `Git` `GitHub Pages` `Render` `CNAME DNS Routing` `VS Code` |
+
+---
+
+## 📂 Repository File Architecture
 
 ```text
 parikshit-portfolio/
-├── CNAME               # Custom domain configuration (www.parikshit07.tech)
-├── LICENSE             # MIT License
-├── README.md           # Project documentation
-├── index.html          # Main website structure, terminal, and content
-├── style.css           # Deep Brinjal styling, glassmorphism, ambient lighting
-├── script.js           # Live canvas particles, terminal logic, splash screen
-├── resume.pdf          # Official software engineering resume
-└── scripts/
-    └── setup.sh        # Local development server setup script
+│
+├── 🌐 CNAME                   # Custom domain configuration (www.parikshit07.tech)
+├── 📜 LICENSE                 # MIT License
+├── 📖 README.md               # Portfolio documentation & placement guide
+├── 📄 index.html              # Semantic HTML markup, terminal, and project cards
+├── 🎨 style.css               # Deep Brinjal Obsidian design system & glassmorphism
+├── ⚡ script.js               # Live canvas particles, terminal CLI, & splash screen
+├── 📑 resume.pdf              # Official Software Engineering resume
+└── 📁 scripts/
+    └── setup.sh               # Local development server helper script
 ```
 
 ---
 
-## 🚀 Getting Started Locally
+## 🚀 Quick Start & Local Development
 
-### Option 1: Using the Automated Setup Script
+### Option 1: Automated Script
 ```bash
+# Clone the repository
 git clone https://github.com/parikshit-thakur25/parikshit-portfolio.git
 cd parikshit-portfolio
+
+# Run setup script
 chmod +x scripts/setup.sh
 ./scripts/setup.sh
 ```
 
-### Option 2: Run via Python Local Server
+### Option 2: Run via Python Server
 ```bash
 python3 -m http.server 8000
 ```
-Then open your browser and navigate to `http://localhost:8000`.
+Open **`http://localhost:8000`** in your browser.
 
 ---
 
-## 🌐 Live Website
+## 📬 Connect & Contact Card
 
-- **Website:** [www.parikshit07.tech](https://www.parikshit07.tech)
-- **Source Code:** [GitHub Repository](https://github.com/parikshit-thakur25/parikshit-portfolio)
-
----
-
-## 👨‍💻 About Me
-
-I'm a Computer Science and Engineering student at **Graphic Era (Deemed to be University)**, specializing in Artificial Intelligence and Data Science.
-
-I'm focused on developing strong programming fundamentals, mastering full-stack web development, and exploring machine learning algorithms:
-
-- Strengthening Data Structures & Algorithms in C++ & Python.
-- Building scalable full-stack web applications (MERN / Python Flask).
-- Exploring applied Machine Learning & intelligent healthcare diagnostic systems.
-- Preparing for Software Engineering internship and placement drives.
+| Platform | Handle / Link |
+| :--- | :--- |
+| 🌐 **Live Website** | [parikshit07.tech](https://www.parikshit07.tech) |
+| ✉️ **Email** | [work.parikshit07@gmail.com](mailto:work.parikshit07@gmail.com) |
+| 🐙 **GitHub** | [@parikshit-thakur25](https://github.com/parikshit-thakur25) |
+| 💼 **LinkedIn** | [Parikshit Thakur](https://www.linkedin.com/in/parikshit-thakur-1a098a2a3) |
+| 📸 **Instagram** | [@pump_manga.co](https://www.instagram.com/pump_manga.co) |
 
 ---
 
-## 📬 Connect With Me
-
-- **Website:** [parikshit07.tech](https://www.parikshit07.tech)
-- **Email:** [work.parikshit07@gmail.com](mailto:work.parikshit07@gmail.com)
-- **GitHub:** [@parikshit-thakur25](https://github.com/parikshit-thakur25)
-- **LinkedIn:** [Parikshit Thakur](https://www.linkedin.com/in/parikshit-thakur-1a098a2a3)
-- **Instagram:** [@pump_manga.co](https://www.instagram.com/pump_manga.co)
-
----
-
-## 📜 License
-
-Distributed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+<div align="center">
 
 Handcrafted with ❤️ by **Parikshit Thakur**  
-B.Tech CSE (Artificial Intelligence & Data Science)  
+*B.Tech CSE (Artificial Intelligence & Data Science)*  
 **Graphic Era (Deemed to be University), Dehradun, India**
+
+Distributed under the [MIT License](LICENSE).
+
+</div>
