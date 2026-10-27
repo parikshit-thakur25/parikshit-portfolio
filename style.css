@@ -37,15 +37,27 @@ body {
     position: relative;
 }
 
-/* Live Ambient Interactive Canvas */
-#ambientCanvas {
+/* Live Parallax Ambiance Wrapper & Canvas */
+.parallax-ambiance-wrapper {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    top: -6vh;
+    left: -6vw;
+    width: 112vw;
+    height: 112vh;
     pointer-events: none;
     z-index: 0;
+    overflow: hidden;
+}
+
+#ambientCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* Full-Screen Intro Splash */
@@ -151,58 +163,51 @@ body {
 
 /* Ambient Floating Brinjal & Violet Mesh Orbs */
 .ambient-orb {
-    position: fixed;
+    position: absolute;
     border-radius: 50%;
     filter: blur(140px);
     pointer-events: none;
-    z-index: -1;
-    animation: orbFloat 14s ease-in-out infinite alternate;
+    z-index: 0;
+    will-change: transform;
 }
 
 .orb-1 {
-    width: 700px;
-    height: 700px;
+    width: 750px;
+    height: 750px;
     top: -120px;
     left: -120px;
-    background: radial-gradient(circle, rgba(147, 51, 234, 0.32), rgba(59, 7, 100, 0.25), transparent 70%);
+    background: radial-gradient(circle, rgba(147, 51, 234, 0.35), rgba(59, 7, 100, 0.28), transparent 70%);
 }
 
 .orb-2 {
-    width: 650px;
-    height: 650px;
+    width: 700px;
+    height: 700px;
     bottom: -120px;
     right: -120px;
-    background: radial-gradient(circle, rgba(192, 132, 252, 0.22), rgba(126, 34, 206, 0.18), transparent 70%);
-    animation-delay: -6s;
+    background: radial-gradient(circle, rgba(192, 132, 252, 0.26), rgba(126, 34, 206, 0.2), transparent 70%);
 }
 
 .orb-3 {
-    width: 500px;
-    height: 500px;
+    width: 550px;
+    height: 550px;
     top: 35%;
     left: 30%;
-    background: radial-gradient(circle, rgba(232, 121, 249, 0.15), rgba(76, 29, 149, 0.14), transparent 70%);
-    animation-delay: -3s;
-}
-
-@keyframes orbFloat {
-    0% { transform: translate(0, 0) scale(0.95); }
-    50% { transform: translate(35px, 45px) scale(1.08); }
-    100% { transform: translate(-25px, -35px) scale(0.98); }
+    background: radial-gradient(circle, rgba(232, 121, 249, 0.18), rgba(76, 29, 149, 0.15), transparent 70%);
 }
 
 .grid-overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-image: 
-        linear-gradient(rgba(168, 85, 247, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(168, 85, 247, 0.05) 1px, transparent 1px);
+        linear-gradient(rgba(168, 85, 247, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168, 85, 247, 0.055) 1px, transparent 1px);
     background-size: 40px 40px;
     pointer-events: none;
-    z-index: -1;
+    z-index: 2;
+    will-change: transform;
 }
 
 /* Navbar */
@@ -298,6 +303,55 @@ body {
 .dot-accent {
     color: var(--accent-violet);
     text-shadow: 0 0 20px rgba(192, 132, 252, 0.8);
+}
+
+/* Hero University Badge */
+.hero-uni-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(147, 51, 234, 0.12);
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-family: var(--font-mono);
+    font-size: 0.92rem;
+    color: #e2e8f0;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 0 25px rgba(147, 51, 234, 0.22);
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    margin-top: -0.25rem;
+}
+
+.hero-uni-badge:hover {
+    background: rgba(168, 85, 247, 0.22);
+    border-color: rgba(192, 132, 252, 0.65);
+    box-shadow: 0 0 35px rgba(168, 85, 247, 0.45);
+    transform: translateY(-2px);
+}
+
+.hero-uni-badge .uni-icon {
+    font-size: 1.15rem;
+    line-height: 1;
+}
+
+.hero-uni-badge .uni-text {
+    line-height: 1.4;
+}
+
+.hero-uni-badge .uni-text strong {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+@media (max-width: 600px) {
+    .hero-uni-badge {
+        font-size: 0.82rem;
+        padding: 6px 14px;
+        border-radius: 12px;
+    }
 }
 
 /* Cyber Terminal Card */

@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 appendTerminalLine('> Available Commands: whoami, status, skills, projects, contact, clear', 'term-response cyan');
                 break;
             case 'whoami':
-                appendTerminalLine('> Parikshit Thakur — Exploring Full-Stack Web Dev & Machine Learning', 'term-response cyan');
+                appendTerminalLine('> Parikshit Thakur — B.Tech CSE (AI & DS) @ Graphic Era (Deemed to be University)', 'term-response cyan');
                 break;
             case 'status':
                 appendTerminalLine('> Status: 🟢 Actively Building Projects & Learning New Technologies', 'term-response green');
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-/* Live Interactive Brinjal Particle Constellation Background */
+/* Live Interactive Brinjal Parallax Background & Particle Constellation */
 function initLiveAmbientBackground() {
     const canvas = document.getElementById('ambientCanvas');
     if (!canvas) return;
@@ -94,6 +94,11 @@ function initLiveAmbientBackground() {
     const ctx = canvas.getContext('2d');
     let width = canvas.width = window.innerWidth;
     let height = canvas.height = window.innerHeight;
+
+    const orb1 = document.querySelector('.orb-1');
+    const orb2 = document.querySelector('.orb-2');
+    const orb3 = document.querySelector('.orb-3');
+    const grid = document.querySelector('.grid-overlay');
 
     window.addEventListener('resize', () => {
         width = canvas.width = window.innerWidth;
@@ -103,14 +108,27 @@ function initLiveAmbientBackground() {
     const particles = [];
     const particleCount = Math.min(Math.floor(window.innerWidth / 22), 55);
 
-    const mouse = { x: null, y: null, radius: 150 };
+    const mouse = { x: null, y: null, radius: 160 };
+    let targetParallaxX = 0;
+    let targetParallaxY = 0;
+    let currentParallaxX = 0;
+    let currentParallaxY = 0;
+
     window.addEventListener('mousemove', (e) => {
         mouse.x = e.clientX;
         mouse.y = e.clientY;
+
+        // Calculate offset from center (-window.innerWidth/2 to +window.innerWidth/2)
+        // Moving mouse right/down creates positive offset, moving left/up creates negative offset
+        targetParallaxX = e.clientX - window.innerWidth / 2;
+        targetParallaxY = e.clientY - window.innerHeight / 2;
     });
+
     window.addEventListener('mouseleave', () => {
         mouse.x = null;
         mouse.y = null;
+        targetParallaxX = 0;
+        targetParallaxY = 0;
     });
 
     class Particle {
@@ -124,13 +142,16 @@ function initLiveAmbientBackground() {
         }
 
         update() {
-            this.x += this.vx;
-            this.y += this.vy;
+            // Particle velocity with subtle drift following mouse direction
+            this.x += this.vx + (currentParallaxX * 0.0012);
+            this.y += this.vy + (currentParallaxY * 0.0012);
 
-            if (this.x < 0 || this.x > width) this.vx *= -1;
-            if (this.y < 0 || this.y > height) this.vy *= -1;
+            if (this.x < 0) this.x = width;
+            if (this.x > width) this.x = 0;
+            if (this.y < 0) this.y = height;
+            if (this.y > height) this.y = 0;
 
-            // Mouse interaction
+            // Interactive mouse repulsion/aura
             if (mouse.x !== null && mouse.y !== null) {
                 const dx = mouse.x - this.x;
                 const dy = mouse.y - this.y;
@@ -157,10 +178,52 @@ function initLiveAmbientBackground() {
         particles.push(new Particle());
     }
 
-    function animate() {
+    function animate(timestamp) {
         ctx.clearRect(0, 0, width, height);
 
-        // Draw connections
+        const time = timestamp || performance.now();
+
+        // Smooth lerp damping to follow mouse direction fluidly
+        currentParallaxX += (targetParallaxX - currentParallaxX) * 0.06;
+        currentParallaxY += (targetParallaxY - currentParallaxY) * 0.06;
+
+        // Parallax movement in the direction of the mouse with multi-layer 3D depth
+        if (orb1) {
+            const o1x = currentParallaxX * 0.09 + Math.sin(time * 0.0008) * 22;
+            const o1y = currentParallaxY * 0.09 + Math.cos(time * 0.001) * 18;
+            orb1.style.transform = `translate3d(${o1x}px, ${o1y}px, 0)`;
+        }
+        if (orb2) {
+            const o2x = currentParallaxX * 0.06 + Math.cos(time * 0.0007) * 20;
+            const o2y = currentParallaxY * 0.06 + Math.sin(time * 0.0009) * 22;
+            orb2.style.transform = `translate3d(${o2x}px, ${o2y}px, 0)`;
+        }
+        if (orb3) {
+            const o3x = currentParallaxX * 0.13 + Math.sin(time * 0.0011) * 25;
+            const o3y = currentParallaxY * 0.13 + Math.cos(time * 0.0012) * 24;
+            orb3.style.transform = `translate3d(${o3x}px, ${o3y}px, 0)`;
+        }
+        if (grid) {
+            const gx = currentParallaxX * 0.025;
+            const gy = currentParallaxY * 0.025;
+            grid.style.transform = `translate3d(${gx}px, ${gy}px, 0)`;
+        }
+        // Canvas movement in mouse direction
+        const cx = currentParallaxX * 0.04;
+        const cy = currentParallaxY * 0.04;
+        canvas.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
+
+        // Ambient luminous mouse cursor spotlight aura
+        if (mouse.x !== null && mouse.y !== null) {
+            const aura = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 200);
+            aura.addColorStop(0, 'rgba(192, 132, 252, 0.12)');
+            aura.addColorStop(0.5, 'rgba(147, 51, 234, 0.05)');
+            aura.addColorStop(1, 'transparent');
+            ctx.fillStyle = aura;
+            ctx.fillRect(0, 0, width, height);
+        }
+
+        // Draw particle constellation connections
         for (let i = 0; i < particles.length; i++) {
             for (let j = i + 1; j < particles.length; j++) {
                 const dx = particles[i].x - particles[j].x;
@@ -187,7 +250,7 @@ function initLiveAmbientBackground() {
         requestAnimationFrame(animate);
     }
 
-    animate();
+    requestAnimationFrame(animate);
 }
 
 /* Cursive Handwriting Intro Splash Screen Sequence (Session-based) */
@@ -215,6 +278,13 @@ function initIntroSplash() {
             splashOverlay.style.display = 'none';
         }, 850);
     }
+
+    // Safety timeout: dismisses automatically within 3.5s so it never freezes
+    setTimeout(() => {
+        if (!hasExited) {
+            exitSplash();
+        }
+    }, 3500);
 
     if (skipSplashBtn) {
         skipSplashBtn.addEventListener('click', exitSplash);
