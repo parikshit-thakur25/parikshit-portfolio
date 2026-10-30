@@ -67,7 +67,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #050109;
+    background: #000000;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,16 +84,16 @@ body {
 
 .splash-ambient-glow {
     position: absolute;
-    width: 650px;
-    height: 650px;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.35), rgba(126, 34, 206, 0.22), transparent 70%);
-    filter: blur(120px);
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.28), rgba(126, 34, 206, 0.16), transparent 70%);
+    filter: blur(140px);
     pointer-events: none;
     animation: splashPulse 6s ease-in-out infinite alternate;
 }
 
 @keyframes splashPulse {
-    0% { transform: scale(0.9); opacity: 0.8; }
+    0% { transform: scale(0.9); opacity: 0.7; }
     100% { transform: scale(1.15); opacity: 1; }
 }
 
@@ -108,22 +108,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 120px;
+    min-height: 180px;
 }
 
 .splash-handwriting-text {
     font-family: var(--font-handwriting);
-    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-size: clamp(5.25rem, 12vw, 10.5rem);
     font-weight: 700;
     color: #ffffff;
-    text-shadow: 0 0 35px rgba(168, 85, 247, 0.8), 0 0 70px rgba(126, 34, 206, 0.5);
+    text-shadow: 0 0 45px rgba(255, 255, 255, 0.85), 0 0 90px rgba(168, 85, 247, 0.55);
 }
 
 .splash-cursor {
     font-family: var(--font-mono);
-    font-size: clamp(3rem, 6vw, 5rem);
-    color: var(--accent-violet);
-    margin-left: 6px;
+    font-size: clamp(4.5rem, 10vw, 8.5rem);
+    color: #ffffff;
+    margin-left: 10px;
     animation: blinkCursor 0.8s infinite;
 }
 
@@ -134,9 +134,10 @@ body {
 
 .splash-subtitle {
     font-family: var(--font-mono);
-    font-size: 1.1rem;
-    color: var(--accent-rose);
-    margin-top: 1rem;
+    font-size: 1.15rem;
+    color: #cbd5e1;
+    margin-top: 1.25rem;
+    letter-spacing: 0.5px;
 }
 
 .splash-skip-btn {

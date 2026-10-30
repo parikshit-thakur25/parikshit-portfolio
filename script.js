@@ -296,7 +296,7 @@ function initIntroSplash() {
         }
     });
 
-    const phase1 = "hello ,";
+    const phase1 = "hello";
     const phase2 = "parikshit";
 
     let charIdx = 0;
